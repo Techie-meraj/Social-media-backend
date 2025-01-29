@@ -33,7 +33,12 @@ const PORT=process.env.PORT
 const app=express()
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({ origin: 'http://localhost:5173' }));
+
+app.use(cors({
+  origin: "https://social-media-frontend-fawn.vercel.app", // Your deployed frontend
+  credentials: true
+}));
+
 
 app.use('/user',userRouter)
 app.use('/post',postrouter)
