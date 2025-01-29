@@ -47,7 +47,7 @@
 // module.exports ={registerUser,getallUsers,loginUser}
 
 const userModel = require("../Models/usermodel")
-const bcrypt = require('bcrypt')
+// const bcrypt = require('bcrypt')
 
 exports.getAllUsers = async (req, res) => {
     try {
